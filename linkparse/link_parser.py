@@ -1,6 +1,3 @@
-import re
-
-
 class LinkParserResult:
     uri: str = ""
 
@@ -35,4 +32,10 @@ class LinkParserResult:
 class LinkParser:
 
     def parse(self, link_header: str) -> [LinkParserResult]:
+        """
+        Parses given link header string into link parser results.
+
+        :param link_header: link header as string.
+        :return: List containing link parser results.
+        """
         pass
