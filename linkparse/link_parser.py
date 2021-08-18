@@ -31,7 +31,7 @@ class LinkParserResult:
 
 class LinkParser:
 
-    def parse(self, link_header: str) -> [LinkParserResult]:
+    def parse(self, link_header: str) -> list[LinkParserResult]:
         """
         Parses given link header string into link parser results.
 

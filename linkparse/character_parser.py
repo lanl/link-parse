@@ -1,4 +1,4 @@
-from linkparser.link_parser import LinkParserResult, LinkParser
+from linkparse.link_parser import LinkParserResult, LinkParser
 
 
 class CharacterLinkParser(LinkParser):
@@ -13,7 +13,7 @@ class CharacterLinkParser(LinkParser):
 
     """
 
-    def parse(self, link_header: str) -> [LinkParserResult]:
+    def parse(self, link_header: str) -> list[LinkParserResult]:
         """
         Parses given link header string into link parser results.
 

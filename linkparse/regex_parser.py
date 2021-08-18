@@ -1,6 +1,6 @@
 import re
 
-from linkparser.link_parser import LinkParser, LinkParserResult
+from linkparse.link_parser import LinkParser, LinkParserResult
 
 
 class RegexLinkParser(LinkParser):
@@ -20,7 +20,7 @@ class RegexLinkParser(LinkParser):
         """
         self._split_point = split_point
 
-    def parse(self, link_header: str) -> [LinkParserResult]:
+    def parse(self, link_header: str) -> list[LinkParserResult]:
         """
         Parses given link header string into link parser results.
 
