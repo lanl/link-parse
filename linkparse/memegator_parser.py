@@ -7,7 +7,7 @@ class MemgatorParser(LinkParser):
     Python version of the Regex based parser used in the Memegator implementation. Original implementation in Golang.
 
     Uses character traversal to find splitting points in the link header and uses regular expressions to extract
-    attributes in the link header.
+    attributes in the link header. Modified to extract all link header relations (original filters mementos)
 
     Author : Sawood Alam (@ibnesayeed)
 
@@ -39,9 +39,13 @@ class MemgatorParser(LinkParser):
             if not 'rel' in attribute_map.keys():
                 continue
 
-            # TODO: Extract other attributes
-            results.append(LinkParserResult(uri=uri_split, relationship=attribute_map['rel'],
-                                            datetime=attribute_map.get('datetime', '')))
+            results.append(LinkParserResult(uri=uri_split,
+                                            relationship=attribute_map['rel'],
+                                            link_type=attribute_map.get('type', ''),
+                                            datetime=attribute_map.get('datetime', ''),
+                                            title=attribute_map.get('title', ''),
+                                            link_from=attribute_map.get('from', ''),
+                                            link_until=attribute_map.get('until', '')))
 
         return results
 

@@ -47,14 +47,20 @@ class RegexLinkParser(LinkParser):
 
                 link_type = (re.findall('((?<=type=")[^"]*)', item) or [""])[0]
                 datetime = (re.findall('((?<=datetime=")[^"]*)', item) or [""])[0]
+                title = (re.findall('((?<=title=")[^"]*)', item) or [""])[0]
                 link_from = (re.findall('((?<=from=")[^"]*)', item) or [""])[0]
                 link_until = (re.findall('((?<=until=")[^"]*)', item) or [""])[0]
                 # License needed ??
                 # lic = (re.findall('((?<=license=")[^"]*)', item) or [""])[0]
 
                 _link_parser_result.append(
-                    LinkParserResult(uri=link, relationship=relationship, datetime=datetime, link_type=link_type,
-                                     link_from=link_from, link_until=link_until)
+                    LinkParserResult(uri=link,
+                                     relationship=relationship,
+                                     link_type=link_type,
+                                     datetime=datetime,
+                                     title=title,
+                                     link_from=link_from,
+                                     link_until=link_until)
                 )
 
         return _link_parser_result
