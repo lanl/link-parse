@@ -125,9 +125,16 @@ class CharacterLinkParser(LinkParser):
 
         for key in links.keys():
             value: dict = links[key]
-            _link_parser_results.append(
-                LinkParserResult(uri=key, relationship=value.get("rel", [""])[0], link_type=value.get("type", [""])[0],
-                                 title=value.get("title", [""])[0])
-            )
+            relationships = value.get("rel", [""])
+            for relationship in relationships:
+                _link_parser_results.append(
+                    LinkParserResult(uri=key,
+                                     relationship=relationship,
+                                     link_type=value.get("type", [""])[0],
+                                     datetime=value.get("datetime", [""])[0],
+                                     title=value.get("title", [""])[0],
+                                     link_from=value.get("from", [""])[0],
+                                     link_until=value.get("until", "")[0])
+                )
 
         return _link_parser_results
