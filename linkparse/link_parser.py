@@ -20,7 +20,7 @@ class LinkParserResult:
                  title: str = "",
                  link_from: str = "",
                  link_until: str = ""):
-        self.uri = uri
+        self.uri = uri.strip()
         self.relationship = relationship
         self.datetime = datetime
         self.link_type = link_type
