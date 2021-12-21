@@ -9,15 +9,17 @@ setuptools.setup(
     author="Bhnauka Mahanama",
     author_email="bhanuka@lanl.gov",
     description="Link header parsing library for mementos",
+    keywords=["Memento", "Link Header", "Web archiving"],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mahanama94/link-parser",
+    url="https://github.com/lanl/link-parse",
     packages=setuptools.find_packages(),
     install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Software Development"
     ],
-    python_requires='>=3.7',
+    python_requires=">=3.7",
 )
