@@ -2,7 +2,7 @@ import re
 from linkparse.link_parser import LinkParser, LinkParserResult
 
 
-class MemgatorParser(LinkParser):
+class MemgatorLinkParser(LinkParser):
     """
     Python version of the Regex based parser used in the Memegator implementation. Original implementation in Golang.
 

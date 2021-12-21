@@ -1,0 +1,4 @@
+from aggregator_parser import AggregatorLinkParser
+from character_parser import CharacterLinkParser
+from memegator_parser import MemgatorLinkParser
+from regex_parser import RegexLinkParser

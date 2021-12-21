@@ -2,7 +2,7 @@ from linkparse.errors import ParseError
 from linkparse.link_parser import LinkParser, LinkParserResult
 
 
-class AggregatorParser(LinkParser):
+class AggregatorLinkParser(LinkParser):
     """
 
     Python version of the character based link-header parser used in the aggregator. Original version written in Java.
